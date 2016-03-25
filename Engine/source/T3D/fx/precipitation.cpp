@@ -1838,25 +1838,26 @@ void Precipitation::renderObject(ObjectRenderInst *ri, SceneRenderState *state, 
       tc++;
       vertPtr++;
 
-      // Do we need to flush the buffer by rendering?
+      // Flush the buffer by rendering.
       vertCount += 4;
-      if ( (vertCount + 4) >= mRainVB->mNumVerts ) {
-
+      //if ( (vertCount + 4) >= mRainVB->mNumVerts ) {
          mRainVB.unlock();
          GFX->drawIndexedPrimitive(GFXTriangleList, 0, 0, vertCount, 0, vertCount / 2);
          vertPtr = NULL;
          vertCount = 0;
-      }
+      //}
 
       curr = curr->nextSplashDrop;
    }
 
+   /*
    // Do we have stuff left to render?
    if ( vertCount > 0 ) {
 
       mRainVB.unlock();
       GFX->drawIndexedPrimitive(GFXTriangleList, 0, 0, vertCount, 0, vertCount / 2);
    }
+   */
 
    mLastRenderFrame = ShapeBase::sLastRenderFrame;
 
