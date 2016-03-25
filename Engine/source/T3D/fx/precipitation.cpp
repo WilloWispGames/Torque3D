@@ -1283,7 +1283,7 @@ void Precipitation::interpolateTick(F32 delta)
       else
          curr->renderPosition = curr->position + windVel / curr->mass;
 
-      curr->renderPosition.z -= dt * curr->velocity;
+      //curr->renderPosition.z -= dt * curr->velocity;
 
       curr = curr->next;
    }
