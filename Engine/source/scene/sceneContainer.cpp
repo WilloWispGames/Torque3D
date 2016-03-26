@@ -1641,9 +1641,9 @@ DefineEngineFunction( containerRayCast, const char*,
    char *returnBuffer = Con::getReturnBuffer(bufSize);
    if(ret)
    {
-      dSprintf(returnBuffer, bufSize, "%d %g %g %g %g %g %g %g",
+      dSprintf(returnBuffer, bufSize, "%d %g %g %g %g %g %g %g %d", // added %d (extend collision struct)
                ret, rinfo.point.x, rinfo.point.y, rinfo.point.z,
-               rinfo.normal.x, rinfo.normal.y, rinfo.normal.z, rinfo.distance);
+               rinfo.normal.x, rinfo.normal.y, rinfo.normal.z, rinfo.distance, rinfo.index); // added rinfo.index (extend collision struct)
    }
    else
    {
