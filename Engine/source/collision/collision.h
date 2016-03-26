@@ -60,6 +60,7 @@ struct Collision
    U32 face;                  // Which face was hit
    F32 faceDot;               // -Dot of face with poly normal
    F32 distance;
+   U32 index;                 // Index of sub-object hit within object
    
    Collision() :
       object( NULL ),
