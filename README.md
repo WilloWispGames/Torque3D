@@ -1,3 +1,9 @@
+# Torque 3D base template
+
+This is a base template used by Will o' Wisp Games when creating a new project. This branch will continually be updated with changes/additions used in our projects. Updates to this branch may modify existing engine files. 
+
+All updates here should be compatible with all future gamebuilds and default to disabled with a 'toggle' if necessary. Obviously some updates will need to be applied directly and will simply apply to all future projects( i.e. expanding collision struct ).
+
 # Torque 3D
 
 MIT Licensed Open Source version of [Torque 3D](http://torque3d.org) from [GarageGames](http://www.garagegames.com)
